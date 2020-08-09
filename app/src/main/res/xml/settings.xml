@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="サポート">
+
+        <ListPreference
+            app:key="text_size"
+            app:title="文字の大きさを変える"
+            app:defaultValue="20"
+            android:entries="@array/textSize"
+            android:entryValues="@array/textSizeValue"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:title="法令をダウンロードする">
+
+        <Preference
+            app:title="法令を選ぶ"
+            app:summary="法令を一覧から選択・ダウンロードします。">
+
+            <intent
+                android:targetPackage="com.example.morina.mylawdialog"
+                android:targetClass="com.example.morina.mylawdialog.AddLawActivity"/>
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

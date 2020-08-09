@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetLawDialogFragment">
+
+    <TextView
+        android:id="@+id/textview_dialog_set_law"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_dialog_set_law"
+        android:textSize="19sp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="12dp" />
+
+    <RadioGroup
+        android:id="@+id/tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radio_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="タブ１"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/radio_tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="タブ２"
+            android:textSize="15sp"/>
+
+        <RadioButton
+            android:id="@+id/radio_tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="タブ３"
+            android:textSize="15sp"/>
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/list_downloaded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:divider="@color/light_gray"
+        android:dividerHeight="0.5dp"/>
+
+</LinearLayout>

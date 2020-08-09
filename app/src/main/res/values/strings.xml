@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">スマ法</string>
+
+    <string name="add_law">法令を追加する</string>
+    <string name="setting">設定</string>
+    <string name="set_law">法令をタブにセットする</string>
+    <string name="find_in_page">キーワードで探す</string>
+    <string name="laws_downloaded">ダウンロード済みの法令一覧</string>
+    <string name="dialog_first_use">初回使用のため、法令ダウンロード画面に移行します。ダウンロードはオフラインで行なわれます。</string>
+    <string name="text_not_found">検索対象のテキストを取得できません。再度設定し直してください。</string>
+    <string name="ok">はい</string>
+    <string name="cancel">いいえ</string>
+    <string name="fab">次候補</string>
+
+    <!--com.example.morina.mystatutes.setLawDialog-->
+    <string name="textview_dialog_set_law">セットするタブと法令を選択してください。</string>
+    <string name="toase_tab_not_selected">タブが選択されていません。</string>
+
+    <!--com.example.morina.mystatutes.AddLawFragment-->
+    <string name="text_downloadable_law">ダウンロード可能な法令一覧</string>
+    <string name="text_sub">下記より未ダウンロードの法令をタップして、\nダウンロードを開始してください。</string>
+    <string name="before_dwnld_toast">法令ダウンロードを開始します</string>
+    <string name="after_dwnld_toast">法令ダウンロードが完了しました</string>
+    <string name="already_dwnld_toast">その法令はすでにダウンロード済みです</string>
+
+</resources>
