@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         //ハイライトした次候補へ
-                        if (highlightModel.getSearchStarted() && scrollModel.getScrolledToEnd()) {
+                        if (highlightModel.getSearchStarted() && !scrollModel.getScrolledToEnd()) {
                             int actualResult = searchText.scrollToHighlightedWord(findTextView()
                                     , findScrollView()
                                     , searchResultIndex);
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                                 showToastAtMain("最後の候補です。");
                                 scrollModel.setScrolledToEnd(true);
                             }
-                        }else if (highlightModel.getSearchStarted() && !scrollModel.getScrolledToEnd()){
+                        }else if (highlightModel.getSearchStarted() && scrollModel.getScrolledToEnd()){
                             forOnClose();
                         }else{
                             showToastAtMain("語句を入力し確定／検索ボタンを押してください。");

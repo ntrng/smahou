@@ -61,6 +61,7 @@
         android:src="@drawable/ic_fab"
         android:visibility="gone"
         app:maxImageSize="34dp"
+        app:fabCustomSize="65dp"
         app:elevation="15dp"/>
 
     <ProgressBar
