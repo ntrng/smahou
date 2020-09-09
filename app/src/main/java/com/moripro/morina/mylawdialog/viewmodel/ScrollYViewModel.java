@@ -7,6 +7,7 @@ public class ScrollYViewModel extends ViewModel {
     private int tab1_scroll = 0;
     private int tab2_scroll = 0;
     private int tab3_scroll = 0;
+    private boolean scrolledToEnd = false;
 
     public void storeScrollYState(int y, int position){
         switch (position){
@@ -39,5 +40,13 @@ public class ScrollYViewModel extends ViewModel {
             default:
                 return 0;
         }
+    }
+
+    public void setScrolledToEnd(boolean bool){
+        this.scrolledToEnd = bool;
+    }
+
+    public boolean getScrolledToEnd(){
+        return scrolledToEnd;
     }
 }

@@ -7,6 +7,7 @@ public class TextHighlightedViewModel extends ViewModel {
     private boolean tab1_highlighted = false;
     private boolean tab2_highlighted = false;
     private boolean tab3_highlighted = false;
+    private boolean searchStarted = false;
 
     public void setHighlitedOrNot(int position, boolean bool){
         switch (position){
@@ -33,5 +34,13 @@ public class TextHighlightedViewModel extends ViewModel {
                 default:
                     return false;
         }
+    }
+
+    public void setSearchStarted(boolean bool){
+        this.searchStarted = bool;
+    }
+
+    public boolean getSearchStarted(){
+        return searchStarted;
     }
 }

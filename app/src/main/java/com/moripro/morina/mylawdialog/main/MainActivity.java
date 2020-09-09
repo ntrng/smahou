@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setVisibility(View.GONE);
         updateTabs(-1);
         highlightModel.setHighlitedOrNot(mPager2.getCurrentItem(), false);
+        highlightModel.setSearchStarted(false);
+        scrollModel.setScrolledToEnd(false);
         searchResultIndex = 0;
     }
 
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
         mPager2 = findViewById(R.id.mainPager);
         mTabLayout = findViewById(R.id.tabs);
+        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         setMyWidget(mTabLayout, mPager2);
         progressBar = findViewById(R.id.filter_progressbar);
         searchView = findViewById(R.id.searchview);
@@ -103,13 +107,20 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         //ハイライトした次候補へ
-                        int actualResult = searchText.scrollToHighlightedWord(findTextView()
-                                , findScrollView()
-                                , searchResultIndex);
-                        if(actualResult > searchResultIndex + 1) {
-                            ++searchResultIndex;
-                        }else if(actualResult == searchResultIndex + 1){
-                            showToastAtMain("最後の候補です。");
+                        if (highlightModel.getSearchStarted() && scrollModel.getScrolledToEnd()) {
+                            int actualResult = searchText.scrollToHighlightedWord(findTextView()
+                                    , findScrollView()
+                                    , searchResultIndex);
+                            if (actualResult > searchResultIndex + 1) {
+                                ++searchResultIndex;
+                            }if (actualResult == searchResultIndex + 1) {
+                                showToastAtMain("最後の候補です。");
+                                scrollModel.setScrolledToEnd(true);
+                            }
+                        }else if (highlightModel.getSearchStarted() && !scrollModel.getScrolledToEnd()){
+                            forOnClose();
+                        }else{
+                            showToastAtMain("語句を入力し確定／検索ボタンを押してください。");
                         }
                     }
                 });
@@ -125,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                highlightModel.setSearchStarted(true);
                 progressBar.setVisibility(View.VISIBLE);
                 TextView tv = findTextView();
                 if(tv != null) {
@@ -270,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
     public void updateTabs(final int position){
         runOnUiThread(new Runnable() {
             public void run() {
+                progressBar.setVisibility(View.VISIBLE);
                 adapter = new ViewPagerAdapter(MainActivity.this
                         , mainFragment.editLawList(MainActivity.this)
                         , scrollModel);
@@ -281,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
         });
         scrollModel.storeScrollYState(0, position);
         mPager2.setCurrentItem(position);
+        progressBar.setVisibility(View.GONE);
     }
 
 
