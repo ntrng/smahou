@@ -16,8 +16,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import static com.moripro.morina.util.AddLawUtil.getLineNth;
-import static com.moripro.morina.util.AddLawUtil.getResourceId;
+import static com.moripro.morina.mylawdialog.AddLawUtil.getLineNth;
+import static com.moripro.morina.mylawdialog.AddLawUtil.getResourceId;
 
 
 public class ParseXmlTask extends AsyncTask<String, Integer, String> {

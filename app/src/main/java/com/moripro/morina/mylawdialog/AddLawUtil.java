@@ -1,6 +1,4 @@
-package com.moripro.morina.util;
-
-import com.moripro.morina.mylawdialog.App;
+package com.moripro.morina.mylawdialog;
 
 public class AddLawUtil {
 

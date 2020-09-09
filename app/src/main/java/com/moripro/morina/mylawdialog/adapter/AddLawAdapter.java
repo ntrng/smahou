@@ -1,4 +1,4 @@
-package com.moripro.morina.mylawdialog;
+package com.moripro.morina.mylawdialog.adapter;
 
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.moripro.morina.mylawdialog.AddLawMap;
+import com.moripro.morina.mylawdialog.App;
+import com.moripro.morina.mylawdialog.R;
 import com.moripro.morina.mylawdialog.async.ParseXmlTask;
 import com.moripro.morina.mylawdialog.preference.PrefManagement;
 import java.util.ArrayList;

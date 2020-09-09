@@ -1,4 +1,4 @@
-package com.moripro.morina.mylawdialog;
+package com.moripro.morina.mylawdialog.adapter;
 
 import android.content.Context;
 import android.util.TypedValue;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moripro.morina.mylawdialog.App;
+import com.moripro.morina.mylawdialog.R;
 import com.moripro.morina.mylawdialog.preference.SettingsPref;
 import com.moripro.morina.mylawdialog.viewmodel.ScrollYViewModel;
 import java.util.List;

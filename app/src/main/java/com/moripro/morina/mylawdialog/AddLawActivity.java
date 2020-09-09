@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import com.moripro.morina.mylawdialog.adapter.AddLawAdapter;
 import com.moripro.morina.mylawdialog.async.ParseXmlTask;
 import com.moripro.morina.mylawdialog.preference.PrefManagement;
 

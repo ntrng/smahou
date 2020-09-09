@@ -23,8 +23,8 @@
             app:summary="法令を一覧から選択・ダウンロードします。">
 
             <intent
-                android:targetPackage="com.example.morina.mylawdialog"
-                android:targetClass="com.example.morina.mylawdialog.AddLawActivity"/>
+                android:targetPackage="com.moripro.morina.mylawdialog"
+                android:targetClass="com.moripro.morina.mylawdialog.AddLawActivity"/>
 
         </Preference>
 

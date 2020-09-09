@@ -26,7 +26,7 @@ import com.moripro.morina.mylawdialog.R;
 import com.moripro.morina.mylawdialog.SearchText;
 import com.moripro.morina.mylawdialog.SetLawDialogFragment;
 import com.moripro.morina.mylawdialog.SettingActivity;
-import com.moripro.morina.mylawdialog.ViewPagerAdapter;
+import com.moripro.morina.mylawdialog.adapter.ViewPagerAdapter;
 import com.moripro.morina.mylawdialog.preference.PrefManagement;
 import com.moripro.morina.mylawdialog.preference.SettingsPref;
 import com.moripro.morina.mylawdialog.viewmodel.ScrollYViewModel;
