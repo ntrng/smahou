@@ -41,7 +41,8 @@
                 app:tabBackground="@drawable/tab_background_selector"
                 app:tabTextColor="@color/white"
                 app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:tabIndicatorHeight="7dp"/>
+                app:tabIndicatorHeight="7dp"
+                style="@style/MyTabLayout"/>
             </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager2.widget.ViewPager2

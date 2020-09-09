@@ -94,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
         mPager2 = findViewById(R.id.mainPager);
         mTabLayout = findViewById(R.id.tabs);
-        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         setMyWidget(mTabLayout, mPager2);
         progressBar = findViewById(R.id.filter_progressbar);
         searchView = findViewById(R.id.searchview);
