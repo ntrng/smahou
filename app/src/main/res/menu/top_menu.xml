@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
@@ -13,6 +14,7 @@
         android:icon="@drawable/ic_settings"
         android:title="@string/setting"
         app:showAsAction="ifRoom"
-        app:actionViewClass="com.example.morina.mylawdialog.SettingFragment"/>
+        app:actionViewClass="com.moripro.morina.mylawdialog.SettingFragment"
+        tools:ignore="Instantiatable" />
 
 </menu>

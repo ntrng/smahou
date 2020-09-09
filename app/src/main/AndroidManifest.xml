@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.morina.mylawdialog">
+    package="com.moripro.morina.mylawdialog">
 
     <application
-        android:name=".App"
+        android:name="com.moripro.morina.mylawdialog.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Launcher">
-        <activity android:name=".main.MainActivity"
+        <activity android:name="com.moripro.morina.mylawdialog.main.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddLawActivity"
-            android:parentActivityName=".SettingActivity"/>
+        <activity android:name="com.moripro.morina.mylawdialog.AddLawActivity"
+            android:parentActivityName="com.moripro.morina.mylawdialog.SettingActivity"/>
         <activity
-            android:name=".SettingActivity"
-            android:parentActivityName=".main.MainActivity"/>
+            android:name="com.moripro.morina.mylawdialog.SettingActivity"
+            android:parentActivityName="com.moripro.morina.mylawdialog.main.MainActivity"/>
     </application>
 
 </manifest>
